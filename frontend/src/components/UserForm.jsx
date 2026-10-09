@@ -13,7 +13,7 @@ const UserForm = () => {
     setError(null);
     setLoading(true);
     try {
-      const response = await fetch("/api/users", {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/users`, {
         method: "POST",
         body: JSON.stringify({ name, email }),
         headers: {

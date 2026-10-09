@@ -15,7 +15,7 @@ const PostForm = () => {
     setLoading(true);
 
     try {
-      const response = await fetch("/api/posts", {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/posts`, {
         method: "POST",
         body: JSON.stringify({ title, content, user }),
         headers: {
